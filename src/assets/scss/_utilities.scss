@@ -1,0 +1,14 @@
+$max-width: 80vw;
+$padding: 2rem;
+
+.container {
+    width: min($max-width, calc(100% - $padding));
+    margin-inline: auto;
+}
+
+@media screen and (max-width: 590px) {
+    $padding: 0.5rem;
+    .container {
+        width: calc(100% - $padding);
+    }
+}
