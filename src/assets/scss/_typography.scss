@@ -1,55 +1,58 @@
-.heading{
-    &-1{
+.heading {
+    &-1 {
         font-size: 2.75rem;
         font-weight: bold;
+        margin-bottom: 1rem;
     }
-    &-2{
-        font-size: 2.50rem;
+    &-2 {
+        font-size: 2.5rem;
         font-weight: bold;
+        margin-bottom: 1rem;
     }
-    &-3{
+    &-3 {
         font-size: 2.25rem;
         font-weight: bold;
+        margin-bottom: 1rem;
     }
-    &-4{
+    &-4 {
         font-size: 2rem;
         font-weight: bold;
+        margin-bottom: 1rem;
     }
-
 }
 
 //Font
-.fs{
-    &-xsmall{
-    //8px
-    font-size: 8px; 
+.fs {
+    &-xsmall {
+        //8px
+        font-size: 8px;
     }
     &-small {
         //12px
         font-size: 12px;
     }
-    &-regular{
+    &-regular {
         //16px
         font-size: 1rem;
     }
-    &-medium{
+    &-medium {
         //20px
         font-size: 20px;
     }
-    &-large{
+    &-large {
         //24px
         font-size: 24px;
     }
 }
 
-.fw{
-    &-thin{
+.fw {
+    &-thin {
         font-weight: 300;
     }
-    &-normal{
+    &-normal {
         font-weight: 500;
     }
-    &-bold{
+    &-bold {
         font-weight: 700;
     }
 }

@@ -8,56 +8,55 @@ $padding: 2rem;
 }
 
 //Flex
-.display{
-    &-flex{
+.display {
+    &-flex {
         display: flex;
     }
 
-    &-grid{
+    &-grid {
         display: grid;
     }
 }
 
-.flex{
-    &-grow{
+.flex {
+    &-grow {
         flex-grow: 1;
     }
 
-    &-now-wrap{
+    &-now-wrap {
         flex-wrap: nowrap;
     }
 
-    &-wrap{
+    &-wrap {
         flex-wrap: wrap;
     }
 
-    &-coloumn{
+    &-column {
         flex-direction: column;
     }
 
-    &-row{
+    &-row {
         flex-direction: row;
     }
 }
 
-
-.jc{
-    &-center{
+.jc {
+    &-center {
         justify-content: center;
     }
-    &-evenly{
+    &-evenly {
         justify-content: space-evenly;
     }
-    &-between{
+    &-between {
         justify-content: space-between;
     }
-    &-around{
+    &-around {
         justify-content: space-around;
     }
 }
 
-.ai{
-    &-center{
+.ai {
+    &-center {
         align-items: center;
     }
 }
@@ -66,152 +65,146 @@ $padding: 2rem;
 .btn {
     cursor: pointer;
     transition: all 200ms ease-in-out;
-    padding: .5rem;
+    padding: 0.5rem;
     margin-inline: 1rem;
 
-    &-bordered{
+    &-bordered {
         border-radius: 7px;
     }
-    &-icon{
+    &-icon {
         outline: none;
         background-color: transparent;
         border: none;
-        padding-inline: .5rem;
+        padding-inline: 0.5rem;
     }
 
-    &-primary{
+    &-primary {
         background-color: var(--color-primary);
         border: 2px solid var(--color-secondary);
         color: #fff;
 
-        
-        &:hover{
+        &:hover {
             background-color: var(--color-primary-hover);
         }
     }
-    &-secondary{
+    &-secondary {
         background-color: var(--color-secondary);
         border: 2px solid var(--color-secondary);
         color: #fff;
-        
-        &:hover{
+
+        &:hover {
             background-color: var(--color-secondary-hover);
             border: 2px solid var(--color-secondary-hover);
         }
     }
-    
-    &-outline{
-        &-primary{
+
+    &-outline {
+        &-primary {
             background: transparent;
             border: 2px solid var(--color-primary);
             color: var(--color-primary);
 
-            &:hover{
+            &:hover {
                 color: #fff;
                 background-color: var(--color-primary);
                 border: 2px solid var(--color-primary);
             }
         }
-
     }
 }
 
 //Padding
-.p{
-
-    &-inline-1{
-        padding-inline: .5rem !important;
+.p {
+    &-inline-1 {
+        padding-inline: 0.5rem !important;
     }
-    &-inline-2{
+    &-inline-2 {
         padding-inline: 1rem !important;
     }
-    &-inline-3{
+    &-inline-3 {
         padding-inline: 1.5rem !important;
     }
-    &-inline-4{
+    &-inline-4 {
         padding-inline: 2.5rem !important;
     }
 
-    &-block-1{
-        padding-block: .5rem !important;
+    &-block-1 {
+        padding-block: 0.5rem !important;
     }
-    &-block-2{
+    &-block-2 {
         padding-block: 1rem !important;
     }
-    &-block-3{
+    &-block-3 {
         padding-block: 1.5rem !important;
     }
-    &-block-4{
+    &-block-4 {
         padding-block: 2.5rem !important;
     }
 }
 
-
 //Margin
-.m{
-
-    &-inline-1{
-        margin-inline: .5rem !important;
+.m {
+    &-inline-1 {
+        margin-inline: 0.5rem !important;
     }
-    &-inline-2{
+    &-inline-2 {
         margin-inline: 1rem !important;
     }
-    &-inline-3{
+    &-inline-3 {
         margin-inline: 1.5rem !important;
     }
-    &-inline-4{
+    &-inline-4 {
         margin-inline: 2.5rem !important;
     }
 
-    &-block-1{
-        margin-block: .5rem !important;
+    &-block-1 {
+        margin-block: 0.5rem !important;
     }
-    &-block-2{
+    &-block-2 {
         margin-block: 1rem !important;
     }
-    &-block-3{
+    &-block-3 {
         margin-block: 1.5rem !important;
     }
-    &-block-4{
+    &-block-4 {
         margin-block: 2.5rem !important;
     }
 }
-.m{
-    &-end-1{
+.m {
+    &-end-1 {
         margin-right: 2px;
     }
-    &-end-2{
+    &-end-2 {
         margin-right: 4px;
     }
-    &-end-3{
-        margin-right: .5rem;
+    &-end-3 {
+        margin-right: 0.5rem;
     }
-    &-end-4{
+    &-end-4 {
         margin-right: 1rem;
     }
-    &-end-5{
+    &-end-5 {
         margin-right: 1.5rem;
     }
-    &-end-6{
+    &-end-6 {
         margin-right: 2.5rem;
     }
 }
 
 //Opacity
-.opacity{
-    &-85{
+.opacity {
+    &-85 {
         //85%
-        opacity: .85;
+        opacity: 0.85;
     }
-    &-75{
+    &-75 {
         //75%
-        opacity: .75;
+        opacity: 0.75;
     }
-    &-50{
+    &-50 {
         //50%
-        opacity: .5;
+        opacity: 0.5;
     }
-
 }
 
 //Media Query

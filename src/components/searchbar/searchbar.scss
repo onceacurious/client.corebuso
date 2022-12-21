@@ -1,6 +1,5 @@
 .searchbar {
-
-    &-form{
+    &-form {
         width: fit-content;
         margin-inline: auto;
         display: flex;
@@ -12,23 +11,36 @@
         overflow: hidden;
     }
 
-    &-input, &-btn{
+    &-input,
+    &-btn {
         border: none;
         outline: none;
         background: transparent;
-        
-        
+
         font-size: 16px;
-        padding: .35rem 1rem;
+        padding: 0.35rem 1rem;
     }
-    
-    &-input{
+
+    &-input {
         color: var(--color-accent);
     }
-    &-btn{
-
-        svg{
-            color: var(--color-accent)
+    &-btn {
+        svg {
+            color: var(--color-accent);
         }
     }
+}
+
+.form_input-focus {
+    border-color: var(--color-primary) !important;
+}
+
+.btn_input-focus {
+    svg {
+        color: var(--color-primary) !important;
+    }
+}
+
+.input-focus {
+    color: var(--color-primary) !important;
 }
