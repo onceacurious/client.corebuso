@@ -1,0 +1,55 @@
+.heading{
+    &-1{
+        font-size: 2.75rem;
+        font-weight: bold;
+    }
+    &-2{
+        font-size: 2.50rem;
+        font-weight: bold;
+    }
+    &-3{
+        font-size: 2.25rem;
+        font-weight: bold;
+    }
+    &-4{
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+}
+
+//Font
+.fs{
+    &-xsmall{
+    //8px
+    font-size: 8px; 
+    }
+    &-small {
+        //12px
+        font-size: 12px;
+    }
+    &-regular{
+        //16px
+        font-size: 1rem;
+    }
+    &-medium{
+        //20px
+        font-size: 20px;
+    }
+    &-large{
+        //24px
+        font-size: 24px;
+    }
+}
+
+.fw{
+    &-thin{
+        font-weight: 300;
+    }
+    &-normal{
+        font-weight: 500;
+    }
+    &-bold{
+        font-weight: 700;
+    }
+}

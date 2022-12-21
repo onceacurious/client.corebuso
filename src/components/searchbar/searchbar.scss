@@ -1,0 +1,34 @@
+.searchbar {
+
+    &-form{
+        width: fit-content;
+        margin-inline: auto;
+        display: flex;
+        align-items: center;
+        border: 2px solid var(--color-accent);
+        border-radius: 8px;
+        outline: none;
+
+        overflow: hidden;
+    }
+
+    &-input, &-btn{
+        border: none;
+        outline: none;
+        background: transparent;
+        
+        
+        font-size: 16px;
+        padding: .35rem 1rem;
+    }
+    
+    &-input{
+        color: var(--color-accent);
+    }
+    &-btn{
+
+        svg{
+            color: var(--color-accent)
+        }
+    }
+}

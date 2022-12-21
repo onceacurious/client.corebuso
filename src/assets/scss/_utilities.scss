@@ -1,13 +1,11 @@
 $max-width: 80vw;
 $padding: 2rem;
 
-
 //Layout
 .container {
     width: 100%;
     padding-inline: 6rem;
 }
-
 
 //Flex
 .display{
@@ -42,90 +40,140 @@ $padding: 2rem;
     }
 }
 
-//Font
-.fs{
-    &-xsmall{
-    //8px
-    font-size: 8px; 
+
+.jc{
+    &-center{
+        justify-content: center;
     }
-    &-small {
-        //12px
-        font-size: 12px;
+    &-evenly{
+        justify-content: space-evenly;
     }
-    &-regular{
-        //16px
-        font-size: 1rem;
+    &-between{
+        justify-content: space-between;
     }
-    &-medium{
-        //20px
-        font-size: 20px;
-    }
-    &-large{
-        //24px
-        font-size: 24px;
+    &-around{
+        justify-content: space-around;
     }
 }
 
-.fw{
-    &-thin{
-        font-weight: 300;
-    }
-    &-normal{
-        font-weight: 500;
-    }
-    &-bold{
-        font-weight: 700;
+.ai{
+    &-center{
+        align-items: center;
     }
 }
-
-
-
-
 
 //Button
 .btn {
     cursor: pointer;
-    display: flex;
-    align-items: center;
+    transition: all 200ms ease-in-out;
+    padding: .5rem;
+    margin-inline: 1rem;
+
+    &-bordered{
+        border-radius: 7px;
+    }
     &-icon{
         outline: none;
         background-color: transparent;
         border: none;
         padding-inline: .5rem;
     }
-}
 
+    &-primary{
+        background-color: var(--color-primary);
+        border: 2px solid var(--color-secondary);
+        color: #fff;
+
+        
+        &:hover{
+            background-color: var(--color-primary-hover);
+        }
+    }
+    &-secondary{
+        background-color: var(--color-secondary);
+        border: 2px solid var(--color-secondary);
+        color: #fff;
+        
+        &:hover{
+            background-color: var(--color-secondary-hover);
+            border: 2px solid var(--color-secondary-hover);
+        }
+    }
+    
+    &-outline{
+        &-primary{
+            background: transparent;
+            border: 2px solid var(--color-primary);
+            color: var(--color-primary);
+
+            &:hover{
+                color: #fff;
+                background-color: var(--color-primary);
+                border: 2px solid var(--color-primary);
+            }
+        }
+
+    }
+}
 
 //Padding
 .p{
 
     &-inline-1{
-        padding-inline: .5rem;
+        padding-inline: .5rem !important;
     }
     &-inline-2{
-        padding-inline: 1rem;
+        padding-inline: 1rem !important;
     }
     &-inline-3{
-        padding-inline: 1.5rem;
+        padding-inline: 1.5rem !important;
     }
     &-inline-4{
-        padding-inline: 2.5rem;
+        padding-inline: 2.5rem !important;
+    }
+
+    &-block-1{
+        padding-block: .5rem !important;
+    }
+    &-block-2{
+        padding-block: 1rem !important;
+    }
+    &-block-3{
+        padding-block: 1.5rem !important;
+    }
+    &-block-4{
+        padding-block: 2.5rem !important;
     }
 }
-//margin
+
+
+//Margin
 .m{
 
     &-inline-1{
-        margin-inline: .5rem;
+        margin-inline: .5rem !important;
     }
     &-inline-2{
-        margin-inline: 1rem;
+        margin-inline: 1rem !important;
     }
     &-inline-3{
-        margin-inline: 1.5rem;
+        margin-inline: 1.5rem !important;
     }
     &-inline-4{
-        margin-inline: 2.5rem;
+        margin-inline: 2.5rem !important;
+    }
+
+    &-block-1{
+        margin-block: .5rem !important;
+    }
+    &-block-2{
+        margin-block: 1rem !important;
+    }
+    &-block-3{
+        margin-block: 1.5rem !important;
+    }
+    &-block-4{
+        margin-block: 2.5rem !important;
     }
 }
 .m{
@@ -148,6 +196,25 @@ $padding: 2rem;
         margin-right: 2.5rem;
     }
 }
+
+//Opacity
+.opacity{
+    &-85{
+        //85%
+        opacity: .85;
+    }
+    &-75{
+        //75%
+        opacity: .75;
+    }
+    &-50{
+        //50%
+        opacity: .5;
+    }
+
+}
+
+//Media Query
 @media screen and (max-width: 590px) {
     $padding: 0.5rem;
     .container {

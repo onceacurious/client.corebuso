@@ -8,6 +8,10 @@
     --color-primary: #FF7C03;
     --color-secondary: #2CBA83;
     --color-accent: #99DB21;
+    
+    --color-primary-hover: hsla(29, 95%, 33%, 0.8);
+    --color-secondary-hover: hsla(157, 82%, 32%, 0.8);
+    --color-accent-hover: hsla(81, 85%, 42%, 0.8);
 
     --color-disbale:#b0aeae;
     --color-warning: #e96e6e;
@@ -16,6 +20,7 @@
     --color-success: #5cde57;
 
     --color-bg-primary:#350c25;
+    --color-bg-primary-75:hsla(323, 63%, 13%, .75);
     --color-bg-secondary:#0f4c5c;
 
 }
@@ -126,10 +131,13 @@ body {
         background-color: var(--color-accent);
     }
     &-primary{
-        background-color: var(--color-primary);
+        background-color: var(--color-bg-primary);
+    }
+    &-primary-75{
+        background-color: var(--color-bg-primary-75);
     }
     &-secondary{
-        background-color: var(--color-secondary);
+        background-color: var(--color-bg-secondary);
     }
 }
 

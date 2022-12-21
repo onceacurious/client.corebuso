@@ -2,3 +2,22 @@
     width: 100%;
     min-height: 100vh;
 }
+
+.home{
+    &-body{
+        height: 60vh;
+    }
+}
+
+.cta{
+
+    &-btn{
+        width: 150px;
+    }
+    
+    &-container{
+        width: 100%;
+        text-align: center;
+    }
+
+}
