@@ -6,6 +6,17 @@ $padding: 2rem;
     margin-inline: auto;
 }
 
+
+.btn {
+    cursor: pointer;
+    
+    &-icon{
+        outline: none;
+        background-color: transparent;
+        border: none;
+    }
+}
+
 @media screen and (max-width: 590px) {
     $padding: 0.5rem;
     .container {

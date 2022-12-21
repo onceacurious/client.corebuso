@@ -1,0 +1,33 @@
+.navbar{
+    width: 100%;
+    padding-block: .5rem;
+
+    
+    &-brand{
+        font-size: 32px;
+        font-weight: 700;
+        
+        a {
+            letter-spacing: 1.5px;
+        }
+    }
+    
+}
+.nav{
+
+    &-item, &-list, &-link{
+            list-style: none;
+            text-decoration: none;
+        }
+        
+    
+    &-contact{
+        list-style: none;
+        text-decoration: none;
+        &-list{
+            list-style: none;
+            text-decoration: none;
+
+        }
+    }
+}

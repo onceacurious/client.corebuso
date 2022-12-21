@@ -4,6 +4,8 @@
 :root {
     --poppins: "Poppins";
     --dancing-scripts: "Dancing Script";
+
+    --gradient-text:
 }
 
 * {
@@ -18,4 +20,28 @@ body {
     font-weight: 500;
     line-height: 1.2;
     font-family: var(--poppins);
+}
+
+// Custom Design
+.gradient-text{
+    
+
+    /* ff 3.6+ */
+    background:-moz-radial-gradient(circle at 0% 0%, #2CBA83 0%, #FF7C03 50%, #99DB21 100%);
+
+    /* safari 5.1+,chrome 10+ */
+    background:-webkit-radial-gradient(circle at 0% 0%, #2CBA83 0%, #FF7C03 50%, #99DB21 100%);
+
+    /* opera 11.10+ */
+    background:-o-radial-gradient(circle at 0% 0%, #2CBA83 0%, #FF7C03 50%, #99DB21 100%);
+
+    /* ie 10+ */
+    background:-ms-radial-gradient(circle at 0% 0%, #2CBA83 0%, #FF7C03 50%, #99DB21 100%);
+
+    /* global 92%+ browsers support */
+    background:radial-gradient(circle at 0% 0%, #2CBA83 0%, #FF7C03 50%, #99DB21 100%);
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
