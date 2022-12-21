@@ -1,22 +1,153 @@
 $max-width: 80vw;
 $padding: 2rem;
 
+
+//Layout
 .container {
-    width: min($max-width, calc(100% - $padding));
-    margin-inline: auto;
+    width: 100%;
+    padding-inline: 6rem;
 }
 
 
+//Flex
+.display{
+    &-flex{
+        display: flex;
+    }
+
+    &-grid{
+        display: grid;
+    }
+}
+
+.flex{
+    &-grow{
+        flex-grow: 1;
+    }
+
+    &-now-wrap{
+        flex-wrap: nowrap;
+    }
+
+    &-wrap{
+        flex-wrap: wrap;
+    }
+
+    &-coloumn{
+        flex-direction: column;
+    }
+
+    &-row{
+        flex-direction: row;
+    }
+}
+
+//Font
+.fs{
+    &-xsmall{
+    //8px
+    font-size: 8px; 
+    }
+    &-small {
+        //12px
+        font-size: 12px;
+    }
+    &-regular{
+        //16px
+        font-size: 1rem;
+    }
+    &-medium{
+        //20px
+        font-size: 20px;
+    }
+    &-large{
+        //24px
+        font-size: 24px;
+    }
+}
+
+.fw{
+    &-thin{
+        font-weight: 300;
+    }
+    &-normal{
+        font-weight: 500;
+    }
+    &-bold{
+        font-weight: 700;
+    }
+}
+
+
+
+
+
+//Button
 .btn {
     cursor: pointer;
-    
+    display: flex;
+    align-items: center;
     &-icon{
         outline: none;
         background-color: transparent;
         border: none;
+        padding-inline: .5rem;
     }
 }
 
+
+//Padding
+.p{
+
+    &-inline-1{
+        padding-inline: .5rem;
+    }
+    &-inline-2{
+        padding-inline: 1rem;
+    }
+    &-inline-3{
+        padding-inline: 1.5rem;
+    }
+    &-inline-4{
+        padding-inline: 2.5rem;
+    }
+}
+//margin
+.m{
+
+    &-inline-1{
+        margin-inline: .5rem;
+    }
+    &-inline-2{
+        margin-inline: 1rem;
+    }
+    &-inline-3{
+        margin-inline: 1.5rem;
+    }
+    &-inline-4{
+        margin-inline: 2.5rem;
+    }
+}
+.m{
+    &-end-1{
+        margin-right: 2px;
+    }
+    &-end-2{
+        margin-right: 4px;
+    }
+    &-end-3{
+        margin-right: .5rem;
+    }
+    &-end-4{
+        margin-right: 1rem;
+    }
+    &-end-5{
+        margin-right: 1.5rem;
+    }
+    &-end-6{
+        margin-right: 2.5rem;
+    }
+}
 @media screen and (max-width: 590px) {
     $padding: 0.5rem;
     .container {

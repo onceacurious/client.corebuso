@@ -1,8 +1,12 @@
 .navbar{
     width: 100%;
     padding-block: .5rem;
-
+    display: flex;
+    align-items: center;
     
+    a{
+     outline: none;   
+    }
     &-brand{
         font-size: 32px;
         font-weight: 700;
@@ -10,6 +14,10 @@
         a {
             letter-spacing: 1.5px;
         }
+    }
+
+    li{
+        margin-left: 1rem;
     }
     
 }
@@ -28,6 +36,22 @@
             list-style: none;
             text-decoration: none;
 
+            p{
+                display: flex;
+                align-items: center;
+            }
+            
         }
+        
+        &-link{
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &-item, &-contact{
+        display: flex;
+        align-items: center;
     }
 }

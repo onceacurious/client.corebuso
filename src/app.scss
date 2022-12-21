@@ -5,7 +5,19 @@
     --poppins: "Poppins";
     --dancing-scripts: "Dancing Script";
 
-    --gradient-text:
+    --color-primary: #FF7C03;
+    --color-secondary: #2CBA83;
+    --color-accent: #99DB21;
+
+    --color-disbale:#b0aeae;
+    --color-warning: #e96e6e;
+    --color-info: #2782d6;
+    --color-error: #e6ad32;
+    --color-success: #5cde57;
+
+    --color-bg-primary:#350c25;
+    --color-bg-secondary:#0f4c5c;
+
 }
 
 * {
@@ -23,6 +35,17 @@ body {
 }
 
 // Custom Design
+
+.hide{
+    display: none !important;
+}
+
+.show{
+    display: flex !important;
+}
+
+
+
 .gradient-text{
     
 
@@ -45,3 +68,68 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+.clr
+{
+    &-accent{
+    color: var(--color-accent);
+    }
+    &-primary{
+        color: var(--color-primary);
+    }
+    &-secondary{
+        color: var(--color-secondary);
+    }
+}
+.gradient-bg-light{
+    /* ff 3.6+ */
+    background:-moz-radial-gradient(circle at 9% 14%, rgba(240, 240, 235, 1) 0%, rgba(44, 186, 131, 1) 99%);
+
+    /* safari 5.1+,chrome 10+ */
+    background:-webkit-radial-gradient(circle at 9% 14%, rgba(240, 240, 235, 1) 0%, rgba(44, 186, 131, 1) 99%);
+
+    /* opera 11.10+ */
+    background:-o-radial-gradient(circle at 9% 14%, rgba(240, 240, 235, 1) 0%, rgba(44, 186, 131, 1) 99%);
+
+    /* ie 10+ */
+    background:-ms-radial-gradient(circle at 9% 14%, rgba(240, 240, 235, 1) 0%, rgba(44, 186, 131, 1) 99%);
+
+    /* global 92%+ browsers support */
+    background:radial-gradient(circle at 9% 14%, rgba(240, 240, 235, 1) 0%, rgba(44, 186, 131, 1) 99%);
+
+}
+
+.gradient-bg-dark {
+    /* ff 3.6+ */
+    background: -moz-radial-gradient(circle at 0% 19%, #0f4c5c 0%, #350c25 53%);
+  
+    /* safari 5.1+,chrome 10+ */
+    background: -webkit-radial-gradient(
+      circle at 0% 19%,
+      #0f4c5c 0%,
+      #350c25 53%
+    );
+  
+    /* opera 11.10+ */
+    background: -o-radial-gradient(circle at 0% 19%, #0f4c5c 0%, #350c25 53%);
+  
+    /* ie 10+ */
+    background: -ms-radial-gradient(circle at 0% 19%, #0f4c5c 0%, #350c25 53%);
+  
+    /* global 92%+ browsers support */
+    background: radial-gradient(circle at 0% 19%, #0f4c5c 0%, #350c25 53%);
+  }
+
+.bg
+{
+    &-accent{
+        background-color: var(--color-accent);
+    }
+    &-primary{
+        background-color: var(--color-primary);
+    }
+    &-secondary{
+        background-color: var(--color-secondary);
+    }
+}
+
