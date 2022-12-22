@@ -1,6 +1,6 @@
-import React from 'react'
-import { About, Home, Admin } from './pages'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import React from "react";
+import { About, Home, Admin } from "./pages";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 const Layout = () => {
     return (
@@ -13,7 +13,7 @@ const Layout = () => {
                 </Routes>
             </Router>
         </div>
-    )
-}
+    );
+};
 
-export default Layout
+export default Layout;
