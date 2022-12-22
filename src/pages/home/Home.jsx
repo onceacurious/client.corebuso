@@ -2,6 +2,7 @@ import React, { useEffect, useContext, useState } from "react";
 import { Navbar, Searchbar } from "../../components";
 
 import MainContext from "../../context/MainContext";
+import { WhyCBS } from "../../templates";
 import "./home.scss";
 const Home = () => {
     const { dark } = useContext(MainContext);
@@ -13,8 +14,8 @@ const Home = () => {
         >
             <Navbar />
             <Searchbar />
-            <div className="container home-body display-flex flex-column jc-center ai-center">
-                <p className="heading-4 gradient-text">
+            <div id="homeBody" className="container home-body display-flex flex-column jc-center ai-center">
+                <p  className="heading-4 gradient-text">
                     Let's make your dream come true
                 </p>
                 <p className="heading-2 gradient-text">
@@ -31,7 +32,11 @@ const Home = () => {
                         Request a Demo
                     </button>
                 </div>
+                <p className="gradient-text">
+                    Build you a Modern, Responsive and Reactive website from scratch with an affordable price range
+                </p>
             </div>
+            <WhyCBS/>
         </div>
     );
 };
