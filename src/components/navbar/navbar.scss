@@ -33,6 +33,7 @@
     &-contact {
         list-style: none;
         text-decoration: none;
+        margin-bottom: -25px;
         &-list {
             list-style: none;
             text-decoration: none;
@@ -53,7 +54,7 @@
     &-item,
     &-contact {
         display: flex;
-        align-items: center;
+        // align-items: center;
     }
 }
 
