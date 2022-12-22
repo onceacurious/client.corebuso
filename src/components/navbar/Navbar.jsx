@@ -12,7 +12,7 @@ const Navbar = () => {
     const { setDark, dark } = useContext(MainContext);
 
     return (
-        <div className='navbar gradient-bg-dark container'>
+        <div className='navbar bg-glass container'>
             <h1 className='navbar-brand'>
                 <Link to='/' className='gradient-text' tabIndex={-1}>
                     COREBUSO

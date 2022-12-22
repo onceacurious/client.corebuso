@@ -36,6 +36,8 @@ body {
     font-weight: 500;
     line-height: 1.2;
     font-family: var(--poppins);
+    scroll-behavior: smooth;
+    user-select: none;
 }
 
 // Custom Design
@@ -159,5 +161,41 @@ body {
     &-secondary {
         background-color: var(--color-bg-secondary);
     }
-}
 
+    &-glass {
+        /* ff 3.6+ */
+        background: -moz-radial-gradient(
+            circle at 0% 0%,
+            #0f4c5cd6 0%,
+            #350c25c9 100%
+        );
+
+        /* safari 5.1+,chrome 10+ */
+        background: -webkit-radial-gradient(
+            circle at 0% 0%,
+            #0f4c5cd6 0%,
+            #350c25c9 100%
+        );
+
+        /* opera 11.10+ */
+        background: -o-radial-gradient(
+            circle at 0% 0%,
+            #0f4c5cd6 0%,
+            #350c25c9 100%
+        );
+
+        /* ie 10+ */
+        background: -ms-radial-gradient(
+            circle at 0% 0%,
+            #0f4c5cd6 0%,
+            #350c25c9 100%
+        );
+
+        /* global 92%+ browsers support */
+        background: radial-gradient(
+            circle at 0% 0%,
+            #0f4c5cd6 0%,
+            #350c25c9 100%
+        );
+    }
+}

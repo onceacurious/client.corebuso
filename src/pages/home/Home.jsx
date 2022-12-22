@@ -13,8 +13,8 @@ const Home = () => {
             className={dark ? "gradient-bg-dark" : "gradient-bg-light"}
         >
             <Navbar />
+            <div id="homeBody" className="container home-body display-flex flex-column ai-center">
             <Searchbar />
-            <div id="homeBody" className="container home-body display-flex flex-column jc-center ai-center">
                 <p  className="heading-4 gradient-text">
                     Let's make your dream come true
                 </p>
@@ -25,7 +25,7 @@ const Home = () => {
                     Website Development and Accounting Services
                 </p>
                 <div className="cta-container display-flex m-block-4 jc-center">
-                    <button className="cta-btn btn-outline-primary btn fs-regular fw-bol">
+                    <button className="cta-btn btn-outline-primary btn fs-regular fw-bold">
                         Get Started
                     </button>
                     <button className="cta-btn btn-secondary btn fs-regular fw-bold">

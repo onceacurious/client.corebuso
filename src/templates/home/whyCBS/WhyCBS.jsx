@@ -1,6 +1,6 @@
 import React from 'react'
 import {GiGems} from 'react-icons/gi'
-import {MdDevices} from 'react-icons/md'
+import {TbDevices} from 'react-icons/tb'
 import {SiAtom} from 'react-icons/si'
 
 
@@ -14,7 +14,7 @@ const WhyCBS = () => {
                     <p>Bring value to your business</p>
                 </li>
                 <li className='cbs-list'>
-                    <MdDevices/>
+                    <TbDevices/>
                     <p>Device compatibility</p>
                 </li>
                 <li className='cbs-list'>

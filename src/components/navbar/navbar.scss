@@ -1,57 +1,69 @@
-.navbar{
+.navbar {
     width: 100%;
-    padding-block: .5rem;
+    padding-block: 0.5rem;
     display: flex;
     align-items: center;
-    
-    a{
-     outline: none;   
+    position: fixed;
+    z-index: 10;
+
+    a {
+        outline: none;
     }
-    &-brand{
+    &-brand {
         font-size: 32px;
         font-weight: 700;
-        
+
         a {
             letter-spacing: 1.5px;
         }
     }
 
-    li{
+    li {
         margin-left: 1rem;
     }
-    
 }
-.nav{
-
-    &-item, &-list, &-link{
-            list-style: none;
-            text-decoration: none;
-        }
-        
-    
-    &-contact{
+.nav {
+    &-item,
+    &-list,
+    &-link {
         list-style: none;
         text-decoration: none;
-        &-list{
+    }
+
+    &-contact {
+        list-style: none;
+        text-decoration: none;
+        &-list {
             list-style: none;
             text-decoration: none;
 
-            p{
+            p {
                 display: flex;
                 align-items: center;
             }
-            
         }
-        
-        &-link{
+
+        &-link {
             text-decoration: none;
             display: flex;
             align-items: center;
         }
     }
 
-    &-item, &-contact{
+    &-item,
+    &-contact {
         display: flex;
         align-items: center;
     }
+}
+
+.navbar:before {
+    z-index: -1;
+    content: "";
+    filter: blur(5px);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
 }

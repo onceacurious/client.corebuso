@@ -10,7 +10,7 @@ const Searchbar = () => {
     };
 
     return (
-        <div className="container p-block-2">
+        <div id="searchBar" className="container p-block-2 m-block-2">
             <form
                 className={
                     isFocus

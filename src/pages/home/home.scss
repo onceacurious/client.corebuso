@@ -5,7 +5,9 @@
 
 .home {
     &-body {
-        height: 79vh;
+        max-height: 100vh;
+        min-height: 95vh;
+        padding-top: 120px;
     }
 }
 
@@ -19,4 +21,3 @@
         text-align: center;
     }
 }
-
