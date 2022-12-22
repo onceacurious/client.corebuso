@@ -13,7 +13,23 @@
 
 .cta {
     &-btn {
-        width: 150px;
+        width: 180px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        transition: all 350ms;
+
+        svg {
+            font-size: 18px;
+        }
+    }
+
+    &-btn:nth-child(1) svg {
+        margin-right: 10px;
+    }
+    &-btn:nth-child(2) svg {
+        margin-left: 10px;
     }
 
     &-container {

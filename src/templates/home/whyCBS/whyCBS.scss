@@ -1,7 +1,17 @@
 #whyCBS {
     // background-color: #888;
-    height: 100vh;
+    min-height: 100vh;
     background-attachment: fixed;
+
+    position: relative;
+    z-index: 1;
+
+    li,
+    ul,
+    a {
+        text-decoration: none;
+        list-style: none;
+    }
 }
 
 .cbs {
@@ -14,6 +24,11 @@
         width: 100%;
         justify-content: space-evenly;
         flex-wrap: wrap;
+
+        position: absolute;
+        top: -5.5%;
+        left: 0;
+        right: 0;
     }
 
     &-list {
@@ -22,7 +37,7 @@
         justify-content: center;
         text-align: center;
         flex-direction: column;
-        height: 150px;
+        height: 100px;
         width: 350px;
         margin-block: 1rem;
 
@@ -30,7 +45,7 @@
 
         svg,
         p {
-            color: #fff !important;
+            color: #cbcbcb;
         }
 
         p {
@@ -58,6 +73,7 @@
         right: 0;
         left: 0;
         bottom: 0;
+        box-shadow: 0 0 4px 1px rgba(204, 255, 0, 0.873);
     }
     &-list:nth-child(2) {
         $color: rgba(252, 134, 0, 0.95);
@@ -74,6 +90,7 @@
         right: 0;
         left: 0;
         bottom: 0;
+        box-shadow: 0 0 4px 1px rgba(252, 134, 0, 0.95);
     }
     &-list:nth-child(3) {
         $color: rgba(1, 255, 153, 0.816);
@@ -90,5 +107,6 @@
         right: 0;
         left: 0;
         bottom: 0;
+        box-shadow: 0 0 4px 1px rgba(1, 255, 153, 0.816);
     }
 }

@@ -19,6 +19,16 @@
         font-weight: bold;
         margin-bottom: 1rem;
     }
+    &-5 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+    &-6 {
+        font-size: 1rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
 }
 
 //Font
@@ -54,5 +64,11 @@
     }
     &-bold {
         font-weight: 700;
+    }
+}
+
+.text {
+    &-center {
+        text-align: center;
     }
 }

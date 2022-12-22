@@ -98,13 +98,19 @@ body {
 
 .clr {
     &-accent {
-        color: var(--color-accent);
+        color: var(--color-accent) !important;
     }
     &-primary {
-        color: var(--color-primary);
+        color: var(--color-primary) !important;
     }
     &-secondary {
-        color: var(--color-secondary);
+        color: var(--color-secondary) !important;
+    }
+    &-bg-primary {
+        color: var(--color-bg-primary) !important;
+    }
+    &-bg-secondary {
+        color: var(--color-bg-secondary) !important;
     }
 }
 .gradient-bg-light {
