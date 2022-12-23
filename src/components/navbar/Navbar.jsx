@@ -1,15 +1,20 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { RiFacebookBoxLine } from "react-icons/ri";
 import { SiGmail } from "react-icons/si";
 import { BsPhone } from "react-icons/bs";
 import { MdLightMode, MdNightlight } from "react-icons/md";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { IoCloseSharp } from "react-icons/io5";
 
 import MainContext from "../../context/MainContext";
 import "./navbar.scss";
 
 const Navbar = () => {
     const { setDark, dark } = useContext(MainContext);
+
+    const [toggle, setToggle] = useState(false);
+    
 
     return (
         <div className="navbar bg-glass container">
@@ -64,18 +69,41 @@ const Navbar = () => {
                     </p>
                 </li>
             </ul>
-            <button
-                className={dark ? "btn btn-icon" : "btn btn-icon hide"}
-                onClick={() => setDark(false)}
-            >
-                <MdLightMode className="fs-medium clr-accent" />
-            </button>
-            <button
-                className={dark ? "btn btn-icon hide" : "btn btn-icon"}
-                onClick={() => setDark(true)}
-            >
-                <MdNightlight className="fs-medium clr-accent" />
-            </button>
+
+            {/* Mode */}
+
+            <div className="mode">
+                <button
+                    className={dark ? "" : "scale-out-center"}
+                    onClick={() => setDark(false)}
+                >
+                    <MdLightMode className="fs-medium clr-accent" />
+                </button>
+                <button
+                    className={dark ? "hide" : ""}
+                    onClick={() => setDark(true)}
+                >
+                    <MdNightlight className="fs-medium clr-accent" />
+                </button>
+            </div>
+
+            {/* Hamburger */}
+            <div className="burger-menu">
+                <button
+                    id="burgerShow"
+                    onClick={() => setToggle(true)}
+                    className={toggle ? "hide" : "show"}
+                >
+                    <GiHamburgerMenu className="fs-large clr-accent" />
+                </button>
+                <button
+                    id="burgerClose"
+                    onClick={() => setToggle(false)}
+                    className={!toggle ? "hide" : "show"}
+                >
+                    <IoCloseSharp className="fs-large clr-accent" />
+                </button>
+            </div>
         </div>
     );
 };
