@@ -110,3 +110,10 @@
         box-shadow: 0 0 4px 1px rgba(1, 255, 153, 0.816);
     }
 }
+
+.cbs-why {
+    &-item {
+        display: grid;
+        gap: .75rem;
+    }
+}

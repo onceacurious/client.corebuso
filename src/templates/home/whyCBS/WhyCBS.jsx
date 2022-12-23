@@ -27,7 +27,7 @@ const WhyCBS = () => {
             </ul>
 
             <div className="cbs-what">
-                <p className="heading-5 w90 m-inline-auto gradient-text">
+                <p className="heading-5 w90 m-inline-auto gradient-text m-top-4">
                     We are a team of young professionals seeking to provide a
                     sustainable and valuable product and service that will
                     enhance and improve your business standard.
@@ -54,12 +54,14 @@ const WhyCBS = () => {
             </div>
 
             <div className="cbs-why">
-                <ul>
+                <ul className="cbs-why-item">
                     {data
                         .filter((x) => x.card === "why")
                         .map((i, index) => (
                             <li key={i.title + index}>
                                 <SimpleCard
+                                    class_name="why"
+                                    icon={i.icon}
                                     title={i.title}
                                     content={i.content}
                                 />
@@ -95,6 +97,7 @@ const data = [
     {
         card: "why",
         title: "Eco-Friendly Design",
+        icon: "<ImLeaf/>",
         content:
             "Optimizing website by reducing image size. Strategically plan videos. Use lazy loading for images and media. Improve site navigation to find information easier. Choose a green web host. Finally, set up web caching.",
     },

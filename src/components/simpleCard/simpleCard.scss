@@ -6,12 +6,13 @@ $what-bg-color: rgba(255, 255, 255, 0.845);
         border-radius: 4px;
         margin: 0.5rem;
         height: 120px;
-        width: 370px;
+        width: 350px;
 
         display: flex;
         flex-direction: column;
         justify-content: center;
         padding-inline: 1rem;
+        padding-bottom: 1rem;
         color: var(--color-bg-primary);
         font-size: 18px;
 
@@ -39,4 +40,42 @@ $what-bg-color: rgba(255, 255, 255, 0.845);
     left: 0;
     filter: blur(10px);
     box-shadow: 0 0 4px 2px $what-bg-color;
+}
+
+.why-card {
+    &-container {
+        background: var(--color-bg-secondary);
+        padding: .5rem;
+    }
+
+    &-title button {
+        $color: rgba(217, 255, 0, 0.312);
+        box-shadow: 0 0 8px 2px $color;
+        background: $color;
+        border-radius: 60%;
+        color: var(--color-accent);
+        margin-right: 0.5rem;
+        color: var(--color-primary);
+        padding: 4px;
+
+        svg {
+            font-size: 20px;
+        }
+    }
+
+    &-title {
+        display: flex;
+        color: var(--color-bg-primary);
+        align-items: center;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    &-content {
+        text-align: justify;
+        margin-top: 0.5rem;
+        padding-left: 3rem;
+        color: var(--color-primary);
+        font-weight: 500;
+    }
 }
