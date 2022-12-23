@@ -1,5 +1,4 @@
 #whyCBS {
-    // background-color: #888;
     min-height: 100vh;
     background-attachment: fixed;
 
@@ -26,7 +25,7 @@
         flex-wrap: wrap;
 
         position: absolute;
-        top: -5.5%;
+        top: -5%;
         left: 0;
         right: 0;
     }
@@ -59,7 +58,6 @@
 
     &-list:nth-child(1) {
         $color: rgba(204, 255, 0, 0.873);
-        // background: $color;
         box-shadow: inset 0 0 10rem $color;
         border-radius: 10px;
     }
@@ -77,7 +75,6 @@
     }
     &-list:nth-child(2) {
         $color: rgba(252, 134, 0, 0.95);
-        // background: $color;
         box-shadow: inset 0 0 10rem $color;
         border-radius: 10px;
     }
@@ -94,7 +91,6 @@
     }
     &-list:nth-child(3) {
         $color: rgba(1, 255, 153, 0.816);
-        // background: $color;
         box-shadow: inset 0 0 10rem $color;
         border-radius: 10px;
     }
@@ -112,8 +108,32 @@
 }
 
 .cbs-why {
+    padding-block: 1rem;
+
     &-item {
         display: grid;
-        gap: .75rem;
+        gap: 1rem;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    &-list {
+        background-color: var(--color-bg-secondary);
+    }
+
+    &-list:nth-child(1) {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    &-list:nth-child(2) {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    &-list:nth-child(3) {
+        grid-column: 3;
+        grid-row: 1 / 3;
+    }
+    &-list:nth-child(4) {
+        grid-column: 1 / 3;
+        grid-row: 2;
     }
 }

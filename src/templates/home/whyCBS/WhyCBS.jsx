@@ -58,10 +58,10 @@ const WhyCBS = () => {
                     {data
                         .filter((x) => x.card === "why")
                         .map((i, index) => (
-                            <li key={i.title + index}>
+                            <li key={i.title + index} className="cbs-why-list">
                                 <SimpleCard
                                     class_name="why"
-                                    icon={i.icon}
+                                    image={i.image_url}
                                     title={i.title}
                                     content={i.content}
                                 />
@@ -97,25 +97,28 @@ const data = [
     {
         card: "why",
         title: "Eco-Friendly Design",
-        icon: "<ImLeaf/>",
+        image_url:'https://cdn.pixabay.com/photo/2017/12/07/10/35/country-3003574_960_720.jpg',
         content:
-            "Optimizing website by reducing image size. Strategically plan videos. Use lazy loading for images and media. Improve site navigation to find information easier. Choose a green web host. Finally, set up web caching.",
+        "Optimizing website by reducing image size. Strategically plan videos. Use lazy loading for images and media. Improve site navigation to find information easier. Choose a green web host. Finally, set up web caching.",
     },
     {
         card: "why",
         title: "Search Engine Optimization",
+        image_url:'https://cdn.pixabay.com/photo/2016/10/09/08/32/digital-marketing-1725340_960_720.jpg',
         content:
-            "Guiding clients with a modern and updated step-by-step procedures on implementing SEO like Google Web Master (Google Console). A good site audit help's you understand how search engine index your website.",
+        "Guiding clients with a modern and updated step-by-step procedures on implementing SEO like Google Web Master (Google Console). A good site audit help's you understand how search engine index your website.",
     },
     {
         card: "why",
         title: "Minimalist",
+        image_url:'https://images.unsplash.com/photo-1611572789411-6240f6cea970?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
         content:
-            "A simple yet elegant design structure brings color and flavor to a website. Choose the right design and necessary elements to be used. Meeting the balanced approach, starting from the planning to the building phase, helps the developer decide and implement proper workflow resulting in a rich minimalist website.",
+        "A simple yet elegant design structure brings color and flavor to a website. Choose the right design and necessary elements to be used. Meeting the balanced approach, starting from the planning to the building phase, helps the developer decide and implement proper workflow resulting in a rich minimalist website.",
     },
     {
         card: "why",
         title: "Consistent Typography",
+        image_url:'https://cdn.pixabay.com/photo/2015/05/31/12/53/pencil-791598_960_720.jpg',
         content:
             "Choosing the right font, size, and color palette for a website isn't easy. Strategically planning what typography to use will make your user enjoy their stay on your website while browsing and finding the information they were looking for.",
     },
