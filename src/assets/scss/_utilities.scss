@@ -115,6 +115,19 @@ $padding: 2rem;
 
 //Padding
 .p {
+    &-1 {
+        padding: 0.5rem !important;
+    }
+    &-2 {
+        padding: 1rem !important;
+    }
+    &-3 {
+        padding: 1.5rem !important;
+    }
+    &-4 {
+        padding: 2.5rem !important;
+    }
+
     &-inline-1 {
         padding-inline: 0.5rem !important;
     }
@@ -164,6 +177,31 @@ $padding: 2rem;
     }
     &t-8 {
         padding-top: 8rem !important;
+    }
+
+    &s-1 {
+        padding-left: 0.5rem !important;
+    }
+    &s-2 {
+        padding-left: 1rem !important;
+    }
+    &s-3 {
+        padding-left: 1.5rem !important;
+    }
+    &s-4 {
+        padding-left: 2.5rem !important;
+    }
+    &s-5 {
+        padding-left: 5rem !important;
+    }
+    &s-6 {
+        padding-left: 6rem !important;
+    }
+    &s-7 {
+        padding-left: 7rem !important;
+    }
+    &s-8 {
+        padding-left: 8rem !important;
     }
 }
 
@@ -253,6 +291,10 @@ $padding: 2rem;
     }
     &t-6 {
         margin-top: 2.5rem !important;
+    }
+
+    &-bottom {
+        margin-bottom: 4px !important;
     }
 }
 

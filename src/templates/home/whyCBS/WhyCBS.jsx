@@ -4,8 +4,8 @@ import { TbDevices } from "react-icons/tb";
 import { SiAtom } from "react-icons/si";
 
 import { SimpleCard } from "../../../components";
+import cbs_img from "../../../assets/images/whyCBS.png";
 import "./whyCBS.scss";
-import { IoCodeSlashSharp } from "react-icons/io5";
 const WhyCBS = () => {
     return (
         <div
@@ -27,49 +27,50 @@ const WhyCBS = () => {
                 </li>
             </ul>
 
-            <div className="cbs-what">
-                <p className="heading-5 w90 m-inline-auto gradient-text m-top-4">
+            <div className="cbs-what pt-3">
+                <p className="heading-3 gradient-text text-cap">
+                    Possibility beyond your imagination
+                </p>
+                <p className="heading-6 w90 m-inline-auto gradient-text m-top-4">
                     We are a team of young professionals seeking to provide a
                     sustainable and valuable product and service that will
                     enhance and improve your business standard.
                 </p>
 
-                <p className="heading-3 gradient-text">
-                    The possibility are beyond your imagination
-                </p>
                 <ul className="cbs-what-item display-flex jc-evenly m-block-2 p-block-3 flex-wrap">
-                    {data
-                        .filter((x) => x.card === "what")
-                        .map((i, index) => (
-                            <li key={i.title + index}>
-                                <SimpleCard
-                                    class_name="what"
-                                    icon={i.icon}
-                                    title={i.title}
-                                    content={
-                                        i.content.substring(0, 100) + "..."
-                                    }
-                                />
-                            </li>
-                        ))}
+                    {perks.map((i, index) => (
+                        <li key={i.title + index}>
+                            <SimpleCard
+                                title={i.title}
+                                content={i.content.substring(0, 100) + "..."}
+                            />
+                        </li>
+                    ))}
                 </ul>
             </div>
 
             <div className="cbs-why">
-                <ul className="cbs-why-item">
-                    {data
-                        .filter((x) => x.card === "why")
-                        .map((i, index) => (
-                            <li key={i.title + index} className="cbs-why-list">
-                                <SimpleCard
-                                    class_name="why"
-                                    image={i.image_url}
-                                    title={i.title}
-                                    content={i.content}
-                                />
+                <div className="cbs-why-img">
+                    <img src={cbs_img} alt="Why Corebuso PNG" />
+                </div>
+                <div className="cbs-why-list p-4">
+                    <ul>
+                        {whyCBS.map((i, index) => (
+                            <li
+                                key={i.title + index}
+                                className="cbs-why-list-item"
+                            >
+                                <p className="gradient-text fw-bold heading-5 text-left m-bottom">
+                                    {i.title}
+                                </p>
+                                <div className="cbs-why-bar"></div>
+                                <p className="clr-primary p-2 text-left">
+                                    {i.content}
+                                </p>
                             </li>
                         ))}
-                </ul>
+                    </ul>
+                </div>
             </div>
         </div>
     );
@@ -77,36 +78,33 @@ const WhyCBS = () => {
 
 export default WhyCBS;
 
-const data = [
+const perks = [
     {
-        card: "what",
         title: "Affordable",
         content:
             "We provide an affordable pricing plans with high-quality products and services. No kidding, just plain commitment.",
     },
     {
-        card: "what",
         title: "Customer Support",
         content:
             "Got some issues? No problem, we got your back. Our team will contact you as soon as possible.",
     },
     {
-        card: "what",
         title: "Customizable Design",
         content:
             "Website created professionally just for you. You choose, we plan, we build, and we deliver.",
     },
+];
+
+const whyCBS = [
     {
-        card: "why",
         title: "Eco-Friendly Design",
-        icon: <IoCodeSlashSharp />,
         image_url:
             "https://cdn.pixabay.com/photo/2017/12/07/10/35/country-3003574_960_720.jpg",
         content:
             "Optimizing website by reducing image size. Strategically plan videos. Use lazy loading for images and media. Improve site navigation to find information easier. Choose a green web host. Finally, set up web caching.",
     },
     {
-        card: "why",
         title: "Search Engine Optimization",
         image_url:
             "https://cdn.pixabay.com/photo/2016/10/09/08/32/digital-marketing-1725340_960_720.jpg",
@@ -114,7 +112,6 @@ const data = [
             "Guiding clients with a modern and updated step-by-step procedures on implementing SEO like Google Web Master (Google Console). A good site audit help's you understand how search engine index your website.",
     },
     {
-        card: "why",
         title: "Minimalist",
         image_url:
             "https://images.unsplash.com/photo-1611572789411-6240f6cea970?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
@@ -122,7 +119,6 @@ const data = [
             "A simple yet elegant design structure brings color and flavor to a website. Choose the right design and necessary elements to be used. Meeting the balanced approach, starting from the planning to the building phase, helps the developer decide and implement proper workflow resulting in a rich minimalist website.",
     },
     {
-        card: "why",
         title: "Consistent Typography",
         image_url:
             "https://cdn.pixabay.com/photo/2015/05/31/12/53/pencil-791598_960_720.jpg",

@@ -65,10 +65,24 @@
     &-bold {
         font-weight: 700;
     }
+    &-bolder {
+        font-weight: 900;
+    }
 }
 
 .text {
     &-center {
         text-align: center;
+    }
+    &-left {
+        text-align: left;
+    }
+
+    &-cap {
+        text-transform: capitalize;
+    }
+
+    &-upper {
+        text-transform: uppercase;
     }
 }

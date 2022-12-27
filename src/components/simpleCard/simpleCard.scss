@@ -1,4 +1,4 @@
-$what-bg-color: rgba(255, 255, 255, 0.845);
+$what-bg-color: rgba(255, 255, 255, 0.074);
 
 .what-card {
     &-container {
@@ -13,10 +13,11 @@ $what-bg-color: rgba(255, 255, 255, 0.845);
         justify-content: center;
         padding-inline: 1rem;
         padding-bottom: 1rem;
-        color: var(--color-bg-primary);
+        color: var(--color-primary);
         font-size: 18px;
 
         position: relative;
+        z-index: 1;
     }
     &-title,
     &-content {
@@ -34,6 +35,7 @@ $what-bg-color: rgba(255, 255, 255, 0.845);
 .what-card-container:before {
     content: "";
     position: absolute;
+    z-index: -1;
     top: 0;
     bottom: 0;
     right: 0;
@@ -68,7 +70,6 @@ $what-bg-color: rgba(255, 255, 255, 0.845);
             // width: 100%;
             // height: 100%;
             opacity: 0.5;
-            
         }
     }
 
