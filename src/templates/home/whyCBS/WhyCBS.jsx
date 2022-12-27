@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { GiGems } from "react-icons/gi";
 import { TbDevices } from "react-icons/tb";
 import { SiAtom } from "react-icons/si";
@@ -65,7 +66,8 @@ const WhyCBS = () => {
                                 </p>
                                 <div className="cbs-why-bar"></div>
                                 <p className="clr-primary p-2 text-left">
-                                    {i.content}
+                                    {i.content.substring(0, 150) + "...  "}
+                                    <Link>Read more</Link>
                                 </p>
                             </li>
                         ))}

@@ -147,6 +147,12 @@
 
         transition: all 500ms ease-in-out;
     }
+
+    a {
+        color: inherit;
+        text-decoration: underline !important;
+        // font-size: 14px;
+    }
 }
 
 .cbs-why-list-item:hover .cbs-why-bar {

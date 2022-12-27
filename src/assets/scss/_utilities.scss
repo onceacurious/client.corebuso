@@ -329,6 +329,11 @@ $padding: 2rem;
     }
 }
 
+// Cursor
+.pointer {
+    cursor: pointer !important;
+}
+
 //Media Query
 @media screen and (max-width: 590px) {
     $padding: 0.5rem;
