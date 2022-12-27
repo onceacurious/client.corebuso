@@ -4,7 +4,7 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { IoArrowBackSharp, IoArrowForwardSharp } from "react-icons/io5";
 
 import MainContext from "../../context/MainContext";
-import { WhyCBS } from "../../templates";
+import { Footer, WhyCBS } from "../../templates";
 import "./home.scss";
 const Home = () => {
     const { dark } = useContext(MainContext);
@@ -61,6 +61,7 @@ const Home = () => {
                 </p>
             </div>
             <WhyCBS />
+            <Footer />
         </div>
     );
 };
