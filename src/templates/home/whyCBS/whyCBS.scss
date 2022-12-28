@@ -60,6 +60,7 @@
         $color: rgba(204, 255, 0, 0.873);
         box-shadow: inset 0 0 10rem $color;
         border-radius: 10px;
+        border: 1px solid $color;
     }
 
     &-list:nth-child(1):before {
@@ -77,6 +78,7 @@
         $color: rgba(252, 134, 0, 0.95);
         box-shadow: inset 0 0 10rem $color;
         border-radius: 10px;
+        border: 1px solid $color;
     }
 
     &-list:nth-child(2):before {
@@ -93,6 +95,7 @@
         $color: rgba(1, 255, 153, 0.816);
         box-shadow: inset 0 0 10rem $color;
         border-radius: 10px;
+        border: 1px solid $color;
     }
 
     &-list:nth-child(3):before {
@@ -103,7 +106,8 @@
         right: 0;
         left: 0;
         bottom: 0;
-        box-shadow: 0 0 4px 1px rgba(1, 255, 153, 0.816);
+        box-shadow: 0 0 2px 1px rgb(1, 255, 153);
+        border: 1px solid rgb(1, 255, 153);
     }
 
     &-what-item {

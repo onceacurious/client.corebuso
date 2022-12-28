@@ -1,6 +1,5 @@
 #homeFooter {
     background: var(--color-bg-secondary);
-    // box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.633);    
     position: relative;
     z-index: 1;
     ul,
@@ -43,7 +42,7 @@
         width: 100%;
         justify-content: space-around;
         align-items: center;
-
+        cursor: pointer;
         display: absolute;
         width: 100%;
         height: 100%;
@@ -89,9 +88,10 @@
     grid-column: 2/4;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
+    width: 70%;
+    margin-inline: auto;
+    // align-items: center;
+    // justify-content: center;
 
     .email-sub-form {
         display: flex;
@@ -109,7 +109,7 @@
 
         input {
             // border-radius: 10px;
-            width: 220px;
+            width: 100%;
             outline: none;
             border: none;
             background: transparent;
@@ -117,6 +117,10 @@
             color: #fff;
             font-size: 18px;
             // background-color: rgba(215, 214, 217, 0.452);
+            &:focus {
+                background: var(--color-bg-secondary);
+                border-radius: 4px;
+            }
         }
         svg {
             font-size: 32px;
@@ -136,33 +140,39 @@
     width: 100%;
 }
 
+.container-con {
+    position: absolute;
+    z-index: -100;
+    top: -38px;
+    right: 0;
+    left: 0;
+    width: fit-content;
+    height: 100%;
+    transform: translateX(55%);
+}
 .triangle {
     position: absolute;
-    z-index: -10;
+    z-index: -1;
+    top: 0.499mm;
+    left: -18px;
+    // right: 0;
     width: 0;
     height: 0;
     border-top: 30px solid transparent;
     border-bottom: 20px solid transparent;
-    border-left: 25px solid hsl(324, 54%, 28%);
+    border-left: 25px solid hsl(323, 25%, 30%);
     transform: rotate(40deg);
-    top: 2.5px;
-    left: -3.2px;
 }
 
 .square {
-    position: absolute;
-    left: 15px;
+    $border-color: rgba(61, 61, 61, 0.352);
     width: 50vw;
-    height: 120px;
+    height: 220px;
     background-color: #6c0545;
     border-bottom-right-radius: 25px;
-    // box-shadow: -2px 2px 4px 2px #999;
-}
-.test {
-    position: absolute;
-    z-index: -10;
-    display: flex;
-    width: 100%;
-    right: 0;
-    top: -48px;
+    border-bottom-left-radius: 25px;
+    box-shadow: 2px 2px 3px rgba(61, 61, 61, 0.411);
+    border-left: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    border-right: 1px solid $border-color;
 }
