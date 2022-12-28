@@ -36,6 +36,10 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div className="section-2">
+                    <div className="test">
+                    <div className="triangle"></div>
+                    <div className="square"></div>
+                    </div>
                     <ul className="home-footer-social-list">
                         <li className="home-footer-social-list-item">
                             <AiFillGithub />
