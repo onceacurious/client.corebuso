@@ -11,7 +11,7 @@ const WhyCBS = () => {
     return (
         <div
             id="whyCBS"
-            className="container display-flex jc-center  flex-column ai-center text-center pt-6"
+            className=" display-flex jc-center  flex-column ai-center text-center pt-6"
         >
             <ul className="cbs-item display-flex">
                 <li className="cbs-list">
@@ -38,7 +38,7 @@ const WhyCBS = () => {
                     enhance and improve your business standard.
                 </p>
 
-                <ul className="cbs-what-item display-flex jc-evenly m-block-2 p-block-3 flex-wrap">
+                <ul className="cbs-what-item display-flex jc-evenly m-block-2 p-block-2">
                     {perks.map((i, index) => (
                         <li key={i.title + index}>
                             <SimpleCard
@@ -50,11 +50,11 @@ const WhyCBS = () => {
                 </ul>
             </div>
 
-            <div className="cbs-why">
-                <div className="cbs-why-img">
+            <div className="cbs-why p-5">
+                <div className="cbs-why-img m-inline-auto">
                     <img src={cbs_img} alt="Why Corebuso PNG" />
                 </div>
-                <div className="cbs-why-list p-4">
+                <div className="cbs-why-list">
                     <ul>
                         {whyCBS.map((i, index) => (
                             <li
@@ -64,8 +64,7 @@ const WhyCBS = () => {
                                 <p className="gradient-text fw-bold heading-5 text-left m-bottom">
                                     {i.title}
                                 </p>
-                                <div className="cbs-why-bar"></div>
-                                <p className="clr-primary p-2 text-left">
+                                <p className="clr-primary p-1 text-left">
                                     {i.content.substring(0, 150) + "...  "}
                                     <Link>Read more</Link>
                                 </p>

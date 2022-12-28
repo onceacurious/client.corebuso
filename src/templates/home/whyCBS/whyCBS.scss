@@ -105,6 +105,10 @@
         bottom: 0;
         box-shadow: 0 0 4px 1px rgba(1, 255, 153, 0.816);
     }
+
+    &-what-item {
+        width: 100%;
+    }
 }
 
 .cbs-why {
@@ -114,6 +118,7 @@
         rgba(225, 160, 62, 0.806),
         rgba(14, 176, 25, 0.687)
     );
+    width: 100%;
     display: flex;
     align-items: center;
 
@@ -122,7 +127,6 @@
         background: $cbs-why-color;
         box-shadow: inset 0 0 10rem $cbs-why-color;
         position: relative;
-
         img {
             width: 500px;
             height: 100%;
@@ -137,24 +141,53 @@
     }
 
     &-list {
-        padding: 1rem;
-    }
-
-    &-bar {
-        width: 20px;
-        height: 4px;
-        background: var(--color-accent);
-
-        transition: all 500ms ease-in-out;
+        padding: 2rem;
+        display: flex;
+        width: 100%;
     }
 
     a {
         color: inherit;
         text-decoration: underline !important;
-        // font-size: 14px;
     }
 }
 
 .cbs-why-list-item:hover .cbs-why-bar {
     width: 150px;
+}
+
+.cbs-why-list-item {
+    text-align: justify;
+    p:nth-child(1) {
+        position: relative;
+        z-index: 1;
+        display: inline;
+    }
+    p:nth-child(1):after {
+        content: "";
+        position: absolute;
+        z-index: 2;
+
+        height: 2px;
+        background: var(--color-accent);
+        bottom: -2px;
+        left: 0;
+        width: 20px;
+        transition: all 500ms ease-in-out;
+    }
+}
+
+.cbs-why-list-item:hover p:nth-child(1):after {
+    width: 100%;
+}
+
+@keyframes slide-right {
+    0% {
+        width: 100%;
+        transform: scaleX(0.1);
+    }
+    100% {
+        right: 0;
+        transform: scaleX(1);
+    }
 }
