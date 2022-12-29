@@ -150,14 +150,11 @@
         width: 100%;
     }
 
-    a {
+    span {
         color: inherit;
         text-decoration: underline !important;
+        cursor: pointer;
     }
-}
-
-.cbs-why-list-item:hover .cbs-why-bar {
-    width: 150px;
 }
 
 .cbs-why-list-item {

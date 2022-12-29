@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { GiGems } from "react-icons/gi";
 import { TbDevices } from "react-icons/tb";
@@ -9,9 +9,11 @@ import cbs_img from "../../../assets/images/whyCBS.png";
 import "./whyCBS.scss";
 import MainContext from "../../../context/MainContext";
 const WhyCBS = () => {
+    const { setHideDialog, setDialogData } = useContext(MainContext);
 
-    const {setHideDialog, setDialogData} = useContext(MainContext)
-
+    useEffect(() => {
+        setHideDialog(true);
+    }, []);
     return (
         <div
             id="whyCBS"
@@ -44,7 +46,12 @@ const WhyCBS = () => {
 
                 <ul className="cbs-what-item display-flex jc-evenly m-block-2 p-block-2">
                     {perks.map((i, index) => (
-                        <li key={i.title + index} onClick={()=>(setHideDialog(false), setDialogData(i))}>
+                        <li
+                            key={i.title + index}
+                            onClick={() => (
+                                setHideDialog(false), setDialogData(i)
+                            )}
+                        >
                             <SimpleCard
                                 title={i.title}
                                 content={i.content.substring(0, 100) + "..."}
@@ -63,14 +70,21 @@ const WhyCBS = () => {
                         {whyCBS.map((i, index) => (
                             <li
                                 key={i.title + index}
-                                className="cbs-why-list-item"
+                                className="cbs-why-list-item pt-2"
                             >
                                 <p className="gradient-text fw-bold heading-5 text-left m-bottom">
                                     {i.title}
                                 </p>
                                 <p className="clr-primary p-1 text-left">
                                     {i.content.substring(0, 150) + "...  "}
-                                    <Link>Read more</Link>
+                                    <span
+                                        onClick={() => (
+                                            setHideDialog(false),
+                                            setDialogData(i)
+                                        )}
+                                    >
+                                        Read more
+                                    </span>
                                 </p>
                             </li>
                         ))}

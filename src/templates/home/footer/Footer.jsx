@@ -105,7 +105,7 @@ const Footer = () => {
                         <form method="post" className="email-sub-form">
                             <SiMinutemailer />
                             <input
-                                type="text"
+                                type="email"
                                 name="emailSub"
                                 id="emailSub"
                                 placeholder="Email Address.."

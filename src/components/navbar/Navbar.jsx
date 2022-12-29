@@ -14,7 +14,6 @@ const Navbar = () => {
     const { setDark, dark } = useContext(MainContext);
 
     const [toggle, setToggle] = useState(false);
-    
 
     return (
         <div className="navbar bg-glass container">
@@ -44,42 +43,20 @@ const Navbar = () => {
                 </li>
             </ul>
 
-            <ul className="nav-contact">
-                <li className="nav-contact-list">
-                    <a
-                        className="nav-contact-link clr-primary fs-small"
-                        href="http://"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <RiFacebookBoxLine className="m-end-1 fs-regular" />
-                        @corebuso
-                    </a>
-                </li>
-                <li className="nav-contact-list">
-                    <p className="clr-primary fs-small">
-                        <SiGmail className="m-end-1 fs-regular" />
-                        corebuso.ph@gmail.com
-                    </p>
-                </li>
-                <li className="nav-contact-list">
-                    <p className="clr-primary fs-small">
-                        <BsPhone className="m-end-1 fs-regular" />
-                        +63 0926 655 4047
-                    </p>
-                </li>
-            </ul>
+            <SocialMedia />
 
             {/* Mode */}
 
             <div className="mode">
                 <button
+                    title="go light"
                     className={dark ? "" : "scale-out-center"}
                     onClick={() => setDark(false)}
                 >
                     <MdLightMode className="fs-medium clr-accent" />
                 </button>
                 <button
+                    title="go dark"
                     className={dark ? "hide" : ""}
                     onClick={() => setDark(true)}
                 >
@@ -109,3 +86,33 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+const SocialMedia = () => {
+    return (
+        <ul className="nav-contact">
+            <li className="nav-contact-list">
+                <a
+                    className="nav-contact-link clr-primary fs-small"
+                    href="http://"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <RiFacebookBoxLine className="m-end-1 fs-regular" />
+                    @corebuso
+                </a>
+            </li>
+            <li className="nav-contact-list">
+                <p className="clr-primary fs-small">
+                    <SiGmail className="m-end-1 fs-regular" />
+                    corebuso.ph@gmail.com
+                </p>
+            </li>
+            <li className="nav-contact-list">
+                <p className="clr-primary fs-small">
+                    <BsPhone className="m-end-1 fs-regular" />
+                    +63 0926 655 4047
+                </p>
+            </li>
+        </ul>
+    );
+};

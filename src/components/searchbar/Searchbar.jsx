@@ -26,18 +26,18 @@ const Searchbar = () => {
                             ? "searchbar-input input-focus"
                             : "searchbar-input"
                     }
-                    type="text"
+                    type="email"
                     placeholder="Search..."
                     onFocus={() => setIsFocus(true)}
                     onBlur={() => setIsFocus(false)}
                 />
-                <ImSearch 
+                <ImSearch
                     className={
                         isFocus
                             ? "searchbar-icon searchbar-icon-focus"
                             : "searchbar-icon"
                     }
-                        />
+                />
             </form>
         </div>
     );
