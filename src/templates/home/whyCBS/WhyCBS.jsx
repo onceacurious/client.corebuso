@@ -10,7 +10,7 @@ import "./whyCBS.scss";
 import MainContext from "../../../context/MainContext";
 const WhyCBS = () => {
 
-    const {setHideDialog} = useContext(MainContext)
+    const {setHideDialog, setDialogData} = useContext(MainContext)
 
     return (
         <div
@@ -44,7 +44,7 @@ const WhyCBS = () => {
 
                 <ul className="cbs-what-item display-flex jc-evenly m-block-2 p-block-2">
                     {perks.map((i, index) => (
-                        <li key={i.title + index} onClick={()=>setHideDialog(false)}>
+                        <li key={i.title + index} onClick={()=>(setHideDialog(false), setDialogData(i))}>
                             <SimpleCard
                                 title={i.title}
                                 content={i.content.substring(0, 100) + "..."}

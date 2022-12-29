@@ -1,19 +1,21 @@
 .dialog {
     position: fixed;
     z-index: -1;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+    transform: scale(0);
+
+    transition: all 500ms ease-in-out;
+
     &-show {
+        transform: scale(1);
         z-index: 10000;
-        width: 100%;
-        height: 100vh;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 4rem;
-
-        animation: scale-in-center 250ms east-in-out;
     }
 }
+
 .dialog-back_draft {
     $color: rgba(255, 255, 255, 0.21);
     position: relative;
@@ -26,7 +28,7 @@
     justify-content: center;
     align-items: center;
     border: 2px solid $color;
-    border-radius: 15px;
+    border-radius: 5px;
 }
 
 .dialog-back_draft:before {

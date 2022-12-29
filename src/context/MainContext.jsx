@@ -6,13 +6,16 @@ export default MainContext;
 
 export const MainProvider = ({ children }) => {
     const [dark, setDark] = useState(true);
-    const [hideDialog, setHideDialog] = useState(null);
+    const [hideDialog, setHideDialog] = useState(true);
+    const [dialogData, setDialogData] = useState([])
 
     const contextData = {
         dark,
         setDark,
         hideDialog,
         setHideDialog,
+        dialogData,
+        setDialogData,
     };
 
     return (

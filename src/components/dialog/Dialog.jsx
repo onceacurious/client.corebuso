@@ -1,20 +1,26 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import {AiOutlineCloseCircle} from "react-icons/ai"
 import MainContext from "../../context/MainContext";
 
 import "./dialog.scss"
 const Dialog = () => {
-    const {hideDialog, setHideDialog} = useContext(MainContext);
+    const {hideDialog, setHideDialog, dialogData} = useContext(MainContext);
+    const [close, setClose] = useState(false)
 
-    useEffect(()=> {
-        setHideDialog(true);
-    },[])
+    const handleClose = (text) => {
+        if(text.trim() === "dialog"){
+            setHideDialog(true)
+        }
+    }
+
+
     return (
-        <section id="dialog" className={hideDialog? "scale-out-center dialog" : "dialog dialog-show"} onClick={()=> setHideDialog(true)}>
+        <section id="dialog" className={`${hideDialog ? "dialog": "dialog dialog-show"}`} onClick={(e)=> handleClose(e.target.id)}>
             <div className="dialog-back_draft">
                 <AiOutlineCloseCircle className="dialog-btn-close pointer" onClick={()=> setHideDialog(true)}/>
                 <div className="dialog-main">
-                    <p>Dialog</p>
+                    <p>{dialogData.title}</p>
+                    <p>{dialogData.content}</p>
                 </div>
             </div>
         </section>
