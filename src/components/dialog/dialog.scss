@@ -1,15 +1,19 @@
-#dialog {
+.dialog {
     position: fixed;
-    z-index: 10000;
-    width: 100%;
-    height: 100vh;
+    z-index: -1;
+    &-show {
+        z-index: 10000;
+        width: 100%;
+        height: 100vh;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 4rem;
+
+        animation: scale-in-center 250ms east-in-out;
+    }
 }
-
 .dialog-back_draft {
     $color: rgba(255, 255, 255, 0.21);
     position: relative;

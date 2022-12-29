@@ -10,11 +10,11 @@ $padding: 2rem;
 //Flex
 .display {
     &-flex {
-        display: flex;
+        display: flex !important;
     }
 
     &-grid {
-        display: grid;
+        display: grid !important;
     }
 }
 

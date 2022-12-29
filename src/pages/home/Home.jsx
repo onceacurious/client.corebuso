@@ -7,13 +7,31 @@ import MainContext from "../../context/MainContext";
 import { CaseStudy, Footer, WhyCBS } from "../../templates";
 import "./home.scss";
 const Home = () => {
-    const { dark } = useContext(MainContext);
+    const { dark, setHideDialog } = useContext(MainContext);
     const [isStarted, setIsStarted] = useState(false);
     const [isDemo, setIsDemo] = useState(false);
 
     const test = () => {
         console.log("test");
     };
+
+
+    //Escape Event
+    const escBtn_clicked = (e) => {
+        if(e.key === "Escape"){
+            setHideDialog(true)
+        }
+    }
+
+    useEffect(()=> {
+        window.addEventListener('keydown', escBtn_clicked, false);
+
+        return () => {
+            window.removeEventListener('keydown', escBtn_clicked, false)
+        }
+    },[])
+
+
 
     return (
         <>

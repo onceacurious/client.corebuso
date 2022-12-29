@@ -18,6 +18,10 @@ $what-bg-color: rgba(255, 255, 255, 0.074);
 
         position: relative;
         z-index: 1;
+
+        &:hover {
+            box-shadow: 0 0 2px 2px rgba(255, 255, 255, 0.55);
+        }
     }
     &-title,
     &-content {
