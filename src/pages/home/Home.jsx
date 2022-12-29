@@ -1,5 +1,5 @@
 import React, { useEffect, useContext, useState } from "react";
-import { Navbar, Searchbar } from "../../components";
+import { Dialog, Navbar, Searchbar } from "../../components";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { IoArrowBackSharp, IoArrowForwardSharp } from "react-icons/io5";
 
@@ -16,10 +16,12 @@ const Home = () => {
     };
 
     return (
+        <>
         <div
             id="home"
             className={dark ? "gradient-bg-dark" : "gradient-bg-light"}
-        >
+            >
+            <Dialog/>
             <Navbar />
             <div
                 id="homeBody"
@@ -64,6 +66,7 @@ const Home = () => {
             <CaseStudy />
             <Footer />
         </div>
+        </>
     );
 };
 

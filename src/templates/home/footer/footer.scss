@@ -108,7 +108,6 @@
         }
 
         input {
-            // border-radius: 10px;
             width: 100%;
             outline: none;
             border: none;
@@ -116,10 +115,10 @@
             padding-left: 0.5rem;
             color: #fff;
             font-size: 18px;
-            // background-color: rgba(215, 214, 217, 0.452);
             &:focus {
                 background: var(--color-bg-secondary);
                 border-radius: 4px;
+                box-shadow: inset 0 0 16px var(--inset-shadow);
             }
         }
         svg {

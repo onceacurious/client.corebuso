@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useContext} from "react";
 import { Link } from "react-router-dom";
 import { GiGems } from "react-icons/gi";
 import { TbDevices } from "react-icons/tb";
@@ -7,7 +7,11 @@ import { SiAtom } from "react-icons/si";
 import { SimpleCard } from "../../../components";
 import cbs_img from "../../../assets/images/whyCBS.png";
 import "./whyCBS.scss";
+import MainContext from "../../../context/MainContext";
 const WhyCBS = () => {
+
+    const {setHideDialog} = useContext(MainContext)
+
     return (
         <div
             id="whyCBS"
@@ -40,7 +44,7 @@ const WhyCBS = () => {
 
                 <ul className="cbs-what-item display-flex jc-evenly m-block-2 p-block-2">
                     {perks.map((i, index) => (
-                        <li key={i.title + index}>
+                        <li key={i.title + index} onClick={()=>setHideDialog(false)}>
                             <SimpleCard
                                 title={i.title}
                                 content={i.content.substring(0, 100) + "..."}

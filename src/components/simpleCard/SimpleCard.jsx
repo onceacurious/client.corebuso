@@ -1,7 +1,7 @@
 import React from "react";
 
 import "./simpleCard.scss";
-const SimpleCard = ({ class_name, title, content, image, icon }) => {
+const SimpleCard = ({ title, content }) => {
     return (
         <div className="what-card-container pointer">
             {title | (title.length == 0) ? (

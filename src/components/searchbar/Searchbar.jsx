@@ -12,6 +12,7 @@ const Searchbar = () => {
     return (
         <div id="searchBar" className="container p-block-2 m-block-2">
             <form
+                method="POST"
                 className={
                     isFocus
                         ? "searchbar-form bg-primary-75 form_input-focus"
@@ -30,16 +31,13 @@ const Searchbar = () => {
                     onFocus={() => setIsFocus(true)}
                     onBlur={() => setIsFocus(false)}
                 />
-                <button
+                <ImSearch 
                     className={
                         isFocus
-                            ? "searchbar-btn btn btn_input-focus"
-                            : "searchbar-btn btn"
+                            ? "searchbar-icon searchbar-icon-focus"
+                            : "searchbar-icon"
                     }
-                    type="submit"
-                >
-                    <ImSearch />
-                </button>
+                        />
             </form>
         </div>
     );
