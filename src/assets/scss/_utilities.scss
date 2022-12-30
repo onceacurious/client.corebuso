@@ -341,15 +341,20 @@ $padding: 2rem;
 }
 
 //Media Query
-@media screen and (min-width: 390px) {
+
+@media screen and (max-width: 590px) {
     .container {
-        padding: 0.5rem !important;
+        padding-inline: 0.5rem !important;
+        width: 100%;
     }
 }
 
-@media screen and (max-width: 590px) {
-    $padding: 0.5rem;
-    .container {
-        width: calc(100% - $padding);
+@media screen and (max-width: 399px) {
+    .p {
+        &-5,
+        &-4,
+        &-3 {
+            padding: 0.1rem !important;
+        }
     }
 }

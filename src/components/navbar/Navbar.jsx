@@ -99,7 +99,7 @@ export default Navbar;
 
 const SocialMedia = ({ social_class }) => {
     return (
-        <ul className={`"nav-contact" ${social_class}`}>
+        <ul className={`nav-contact ${social_class}`}>
             <li className="nav-contact-list">
                 <a
                     className="nav-contact-link clr-primary fs-small"
@@ -129,7 +129,7 @@ const SocialMedia = ({ social_class }) => {
 
 const Menu = ({ menu_class }) => {
     return (
-        <ul className={`"nav-item flex-grow" ${menu_class}`}>
+        <ul className={`nav-item flex-grow ${menu_class}`}>
             <li className="nav-list">
                 <Link className="nav-link clr-accent fs-medium" to="/">
                     Home

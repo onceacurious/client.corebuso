@@ -9,7 +9,7 @@
     z-index: 1;
 }
 
-.home-body::after {
+.home-body:after {
     content: "";
     position: absolute;
     z-index: -1;

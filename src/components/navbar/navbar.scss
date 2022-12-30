@@ -15,6 +15,7 @@
 
         a {
             letter-spacing: 1.5px;
+            text-decoration: none;
         }
     }
 
@@ -22,6 +23,7 @@
         margin-left: 1rem;
     }
 }
+
 .nav {
     &-item,
     &-list,
@@ -34,7 +36,6 @@
 
     &-list a:hover {
         color: var(--color-primary) !important;
-        letter-spacing: 2px;
     }
 
     &-contact {
@@ -123,13 +124,15 @@
 }
 
 .nav-menu {
-    position: absolute;
+    position: fixed;
     z-index: 99999;
     top: 45px;
     right: 30px;
     width: 140px;
     padding: 1rem 2rem 2rem 1rem;
-    background: var(--color-bg-primary-95);
+    background: rgba(137, 29, 85, 0.761);
+    box-shadow: inset 0 0 200px rgba(137, 29, 85, 0.761);
+    border: 1px solid rgba(203, 28, 119, 0.911);
 
     transition: all 500ms ease-in-out;
 
@@ -144,6 +147,11 @@
 
 .nav-menu .nav-list:not(:nth-child(1)) {
     margin-top: 0.5rem;
+}
+
+.nav-menu .nav-item .nav-list .nav-link:hover {
+    color: var(--color-primary);
+    letter-spacing: 2.5px;
 }
 
 .scale-out-center {

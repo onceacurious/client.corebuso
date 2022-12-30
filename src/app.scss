@@ -223,7 +223,7 @@ body {
     }
 }
 
-@media screen and (min-width: 820px) {
+@media screen and (min-width: 870px) {
     .hide-tablet {
         display: flex !important;
     }
@@ -247,16 +247,64 @@ body {
     .display-zoom-in {
         display: flex !important;
     }
-}
 
-@media screen and (max-width: 820px) {
-    .display-tablet {
-        display: flex !important;
+    .cbs-item {
+        position: relative;
+    }
+    .cbs-what-item {
+        flex-wrap: wrap !important;
+    }
+
+    .cbs-why {
+        flex-direction: column;
+    }
+
+    .case-study {
+        &-img {
+            display: none;
+        }
     }
 }
 
-@media screen and (max-width: 399px) {
+@media screen and (max-width: 869px) {
+    .display-tablet {
+        display: flex !important;
+    }
+
+    .cbs-why-img {
+        transform: scale(75%);
+    }
+
+    .case-study {
+        &-body {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 699px) {
+    .cbs-why-img {
+        display: none;
+    }
+    .home-body:after {
+        display: none !important;
+    }
+    .case-study {
+        &-body p:nth-child(1) {
+            text-align: center;
+        }
+        &-main {
+            padding: 0.5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 398px) {
     .display-mobile {
         display: flex !important;
+    }
+
+    #caseStudy {
+        padding: 0.5rem !important;
     }
 }
