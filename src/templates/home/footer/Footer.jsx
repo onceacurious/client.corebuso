@@ -144,8 +144,7 @@ const Footer = () => {
                         </form>
                     </div>
                     <div className="section-4 fw-regular clr-secondary">
-                        Copyright &copy; 2022 Corebuso&trade; - All rights
-                        reserved.
+                        Copyright &copy; 2022 Corebuso. All rights reserved.
                     </div>
                 </div>
             </footer>

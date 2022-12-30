@@ -15,75 +15,80 @@ const Home = () => {
         console.log("test");
     };
 
-
     //Escape Event
     const escBtn_clicked = (e) => {
-        if(e.key === "Escape"){
-            setHideDialog(true)
+        if (e.key === "Escape") {
+            setHideDialog(true);
         }
-    }
+    };
 
-    useEffect(()=> {
-        window.addEventListener('keydown', escBtn_clicked, false);
+    useEffect(() => {
+        window.addEventListener("keydown", escBtn_clicked, false);
 
         return () => {
-            window.removeEventListener('keydown', escBtn_clicked, false)
-        }
-    },[])
-
-
+            window.removeEventListener("keydown", escBtn_clicked, false);
+        };
+    }, []);
 
     return (
         <>
-        <div
-            id="home"
-            className={dark ? "gradient-bg-dark" : "gradient-bg-light"}
-            >
-            <Dialog/>
-            <Navbar />
             <div
-                id="homeBody"
-                className="container home-body display-flex flex-column ai-center"
+                id="home"
+                className={dark ? "gradient-bg-dark" : "gradient-bg-light"}
             >
-                <Searchbar />
-                <p className="heading-4 gradient-text">
-                    Let's make your dream come true
-                </p>
-                <p className="heading-2 gradient-text">
-                    CORE BUSINESS SOLUTION
-                </p>
-                <p className="gradient-text">
-                    Website Development and Accounting Services
-                </p>
-                <div className="cta-container display-flex m-block-4 jc-center">
-                    <button
-                        className="cta-btn btn-outline-primary btn fs-regular fw-bold"
-                        onMouseEnter={() => setIsStarted(true)}
-                        onMouseLeave={() => setIsStarted(false)}
-                    >
-                        <IoIosArrowBack className={!isStarted ? "" : "hide"} />
-                        <IoArrowBackSharp className={isStarted ? "" : "hide"} />
-                        Get Started
-                    </button>
-                    <button
-                        className="cta-btn btn-secondary btn fs-regular fw-bold"
-                        onMouseEnter={() => setIsDemo(true)}
-                        onMouseLeave={() => setIsDemo(false)}
-                    >
-                        Request a Demo
-                        <IoIosArrowForward className={!isDemo ? "" : "hide"} />
-                        <IoArrowForwardSharp className={isDemo ? "" : "hide"} />
-                    </button>
+                <Dialog />
+                <Navbar />
+                <div
+                    id="homeBody"
+                    className="container home-body display-flex flex-column ai-center"
+                >
+                    <Searchbar />
+                    <p className="heading-4 gradient-text">
+                        Let's make your dream come true
+                    </p>
+                    <p className="heading-2 gradient-text">
+                        CORE BUSINESS SOLUTION
+                    </p>
+                    <p className="gradient-text">
+                        Website Development and Accounting Services
+                    </p>
+                    <div className="cta-container display-flex m-block-4 jc-center">
+                        <button
+                            className="cta-btn btn-outline-primary btn fs-regular fw-bold"
+                            onMouseEnter={() => setIsStarted(true)}
+                            onMouseLeave={() => setIsStarted(false)}
+                        >
+                            <IoIosArrowBack
+                                className={!isStarted ? "" : "hide"}
+                            />
+                            <IoArrowBackSharp
+                                className={isStarted ? "" : "hide"}
+                            />
+                            Get Started
+                        </button>
+                        <button
+                            className="cta-btn btn-secondary btn fs-regular fw-bold"
+                            onMouseEnter={() => setIsDemo(true)}
+                            onMouseLeave={() => setIsDemo(false)}
+                        >
+                            Request a Demo
+                            <IoIosArrowForward
+                                className={!isDemo ? "" : "hide"}
+                            />
+                            <IoArrowForwardSharp
+                                className={isDemo ? "" : "hide"}
+                            />
+                        </button>
+                    </div>
+                    <p className="gradient-text">
+                        Build you a Modern, Responsive and Reactive website from
+                        scratch with an affordable price range
+                    </p>
                 </div>
-                <p className="gradient-text">
-                    Build you a Modern, Responsive and Reactive website from
-                    scratch with an affordable price range
-                </p>
+                <WhyCBS />
+                <CaseStudy />
+                <Footer />
             </div>
-            <WhyCBS />
-            <CaseStudy />
-            <Footer />
-        </div>
         </>
     );
 };
