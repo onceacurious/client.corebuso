@@ -15,6 +15,9 @@ export const MainProvider = ({ children }) => {
     //Social
     const [hideNavSocial, setHideNavSocial] = useState(false);
 
+    //Menu
+    const [showMenu, setShowMenu] = useState(false);
+
     const contextData = {
         dark,
         setDark,
@@ -24,6 +27,8 @@ export const MainProvider = ({ children }) => {
         setDialogData,
         hideNavSocial,
         setHideNavSocial,
+        showMenu,
+        setShowMenu,
     };
 
     return (

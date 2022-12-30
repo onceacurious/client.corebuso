@@ -341,6 +341,12 @@ $padding: 2rem;
 }
 
 //Media Query
+@media screen and (min-width: 390px) {
+    .container {
+        padding: 0.5rem !important;
+    }
+}
+
 @media screen and (max-width: 590px) {
     $padding: 0.5rem;
     .container {
