@@ -6,6 +6,7 @@ import { BsPhone } from "react-icons/bs";
 import { MdLightMode, MdNightlight } from "react-icons/md";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCloseSharp } from "react-icons/io5";
+import { IoIosContact } from "react-icons/io";
 
 import MainContext from "../../context/MainContext";
 import "./navbar.scss";
@@ -99,7 +100,18 @@ export default Navbar;
 
 const SocialMedia = ({ social_class }) => {
     return (
-        <ul className={`nav-contact ${social_class}`}>
+        <ul className={`nav-contact flex-wrap ${social_class}`}>
+            <li className="nav-contact-list">
+                <a
+                    className="nav-contact-link clr-primary fs-small"
+                    href="mailto:francisdeoaureliofda@gmail.com"
+                >
+                    <IoIosContact className="me-2 fs-regular" />
+                    francisdeoaureliofda@gmail.com
+                </a>
+                {/* <p >
+                </p> */}
+            </li>
             <li className="nav-contact-list">
                 <a
                     className="nav-contact-link clr-primary fs-small"
@@ -107,19 +119,22 @@ const SocialMedia = ({ social_class }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <RiFacebookBoxLine className="m-end-1 fs-regular" />
+                    <RiFacebookBoxLine className="me-2 fs-regular" />
                     @corebuso
                 </a>
             </li>
             <li className="nav-contact-list">
-                <p className="clr-primary fs-small">
-                    <SiGmail className="m-end-1 fs-regular" />
+                <a
+                    className="nav-contact-link clr-primary fs-small"
+                    href="mailto:corebuso.ph@gmail.com"
+                >
+                    <SiGmail className="me-2 fs-regular" />
                     corebuso.ph@gmail.com
-                </p>
+                </a>
             </li>
             <li className="nav-contact-list">
                 <p className="clr-primary fs-small">
-                    <BsPhone className="m-end-1 fs-regular" />
+                    <BsPhone className="me-2 fs-regular" />
                     +63 0926 655 4047
                 </p>
             </li>

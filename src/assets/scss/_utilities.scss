@@ -342,19 +342,43 @@ $padding: 2rem;
 
 //Media Query
 
+@media screen and (max-width: 890px) {
+    .p {
+        &-5,
+        &-4,
+        &-3 {
+            padding: 1rem !important;
+        }
+        &s {
+            &-5,
+            &-4,
+            &-3 {
+                padding-left: 0px !important;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 590px) {
     .container {
         padding-inline: 0.5rem !important;
         width: 100%;
     }
-}
-
-@media screen and (max-width: 399px) {
     .p {
         &-5,
         &-4,
         &-3 {
             padding: 0.1rem !important;
         }
+        &s {
+            &-5,
+            &-4,
+            &-3 {
+                padding-left: 0.5rem !important;
+            }
+        }
     }
+}
+
+@media screen and (max-width: 399px) {
 }

@@ -15,6 +15,10 @@ import { DiDjango } from "react-icons/di";
 import { FiFigma } from "react-icons/fi";
 
 import "./footer.scss";
+
+const handleSubmit = (e) => {
+    e.preventDefault();
+};
 const Footer = () => {
     return (
         <>
@@ -133,7 +137,11 @@ const Footer = () => {
                         <p className="fw-bold fs-medium clr-accent">
                             Subscribe to our news letter
                         </p>
-                        <form method="post" className="email-sub-form">
+                        <form
+                            method="post"
+                            className="email-sub-form"
+                            onSubmit={handleSubmit}
+                        >
                             <SiMinutemailer />
                             <input
                                 type="email"
