@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { AiFillGithub } from "react-icons/ai";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { FaFacebookSquare } from "react-icons/fa";
@@ -29,19 +30,49 @@ const Footer = () => {
                         </p>
                         <ul className="home-footer-powered-list ps-2">
                             <li className="home-footer-powered-list-item">
-                                <DiDjango title="django" />
+                                <a
+                                    href="https://www.djangoproject.com/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <DiDjango title="django" />
+                                </a>
                             </li>
                             <li className="home-footer-powered-list-item">
-                                <FiFigma title="figma" />
+                                <a
+                                    href="https://www.figma.com/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <FiFigma title="figma" />
+                                </a>
                             </li>
                             <li className="home-footer-powered-list-item">
-                                <SiReact title="react" />
+                                <a
+                                    href="https://reactjs.org/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <SiReact title="react" />
+                                </a>
                             </li>
                             <li className="home-footer-powered-list-item">
-                                <SiVite title="vite" />
+                                <a
+                                    href="https://vitejs.dev/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <SiVite title="vite" />
+                                </a>
                             </li>
                             <li className="home-footer-powered-list-item">
-                                <SiVisualstudiocode title="vscode" />
+                                <a
+                                    href="https://code.visualstudio.com/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <SiVisualstudiocode title="vscode" />
+                                </a>
                             </li>
                         </ul>
                     </div>
