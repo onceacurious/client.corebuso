@@ -12,9 +12,9 @@ import MainContext from "../../context/MainContext";
 import "./navbar.scss";
 
 const Navbar = () => {
-    const { setDark, dark, setShowMenu, showMenu } = useContext(MainContext);
+    const { setDark, dark, setShowMenu, showMenu, toggle, setToggle } = useContext(MainContext);
 
-    const [toggle, setToggle] = useState(false);
+    // const [toggle, setToggle] = useState(false);
 
     const getViewWidth = () => {
         const size = window.innerWidth;
@@ -23,6 +23,11 @@ const Navbar = () => {
             setToggle(false);
         }
     };
+
+    const handleNavMenu=()=> {
+        setToggle(false);
+        setShowMenu(false);
+    }
 
     useEffect(() => {
         window.addEventListener("resize", getViewWidth, false);
@@ -143,20 +148,28 @@ const SocialMedia = ({ social_class }) => {
 };
 
 const Menu = ({ menu_class }) => {
+
+    const {setToggle, setShowMenu} = useContext(MainContext);
+
+    const handleNavMenu = () => {
+        setToggle(false);
+        setShowMenu(false);
+    }
+
     return (
         <ul className={`nav-item flex-grow ${menu_class}`}>
             <li className="nav-list">
-                <Link className="nav-link clr-accent fs-medium" to="/">
+                <Link className="nav-link clr-accent fs-medium" to="/" onClick={handleNavMenu}>
                     Home
                 </Link>
             </li>
             <li className="nav-list">
-                <Link className="nav-link clr-accent fs-medium" to="/about-us">
+                <Link className="nav-link clr-accent fs-medium" to="/about-us"onClick={handleNavMenu}>
                     About
                 </Link>
             </li>
             <li className="nav-list">
-                <Link className="nav-link clr-accent fs-medium" to="/admin">
+                <Link className="nav-link clr-accent fs-medium" to="/admin"onClick={handleNavMenu}>
                     Admin
                 </Link>
             </li>
