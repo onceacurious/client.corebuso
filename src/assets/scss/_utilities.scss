@@ -306,16 +306,16 @@ $padding: 2rem;
 
 .w {
     &100 {
-        width: 100%;
+        width: 100% !important;
     }
     &90 {
-        width: 90%;
+        width: 90% !important;
     }
     &75 {
-        width: 75%;
+        width: 75% !important;
     }
     &50 {
-        width: 50%;
+        width: 50% !important;
     }
 }
 
@@ -381,4 +381,7 @@ $padding: 2rem;
 }
 
 @media screen and (max-width: 399px) {
+    .w100 {
+        width: 75% !important;
+    }
 }

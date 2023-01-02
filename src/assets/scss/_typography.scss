@@ -71,6 +71,22 @@
 }
 
 .text {
+    &-sm {
+        &-center {
+            text-align: center;
+        }
+        &-left {
+            text-align: justify;
+        }
+
+        &-cap {
+            text-transform: capitalize;
+        }
+
+        &-upper {
+            text-transform: uppercase;
+        }
+    }
     &-center {
         text-align: center;
     }
@@ -84,5 +100,35 @@
 
     &-upper {
         text-transform: uppercase;
+    }
+}
+
+@media screen and (min-width: 591px) {
+    .text {
+        &-sm {
+            &-center {
+                text-align: center;
+            }
+            &-left {
+                text-align: justify;
+            }
+
+            &-cap {
+                text-transform: capitalize;
+            }
+
+            &-upper {
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .heading-1,
+    .heading-2,
+    .heading-3,
+    .heading-4 {
+        transform: scale(0.7);
     }
 }

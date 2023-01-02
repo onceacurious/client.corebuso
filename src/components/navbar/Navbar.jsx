@@ -12,7 +12,8 @@ import MainContext from "../../context/MainContext";
 import "./navbar.scss";
 
 const Navbar = () => {
-    const { setDark, dark, setShowMenu, showMenu, toggle, setToggle } = useContext(MainContext);
+    const { setDark, dark, setShowMenu, showMenu, toggle, setToggle } =
+        useContext(MainContext);
 
     // const [toggle, setToggle] = useState(false);
 
@@ -24,10 +25,10 @@ const Navbar = () => {
         }
     };
 
-    const handleNavMenu=()=> {
+    const handleNavMenu = () => {
         setToggle(false);
         setShowMenu(false);
-    }
+    };
 
     useEffect(() => {
         window.addEventListener("resize", getViewWidth, false);
@@ -49,7 +50,12 @@ const Navbar = () => {
             </div>
             <div className="navbar bg-glass container">
                 <h1 className="navbar-brand">
-                    <Link to="/" className="gradient-text" tabIndex={-1}>
+                    <Link
+                        to="/"
+                        className="gradient-text"
+                        tabIndex={-1}
+                        onClick={() => (setToggle(false), setShowMenu(false))}
+                    >
                         COREBUSO
                     </Link>
                 </h1>
@@ -105,7 +111,7 @@ export default Navbar;
 
 const SocialMedia = ({ social_class }) => {
     return (
-        <ul className={`nav-contact flex-wrap ${social_class}`}>
+        <ul className={`nav-contact flex-wrap m-inline-auto ${social_class}`}>
             <li className="nav-contact-list">
                 <a
                     className="nav-contact-link clr-primary fs-small"
@@ -114,8 +120,6 @@ const SocialMedia = ({ social_class }) => {
                     <IoIosContact className="me-2 fs-regular" />
                     francisdeoaureliofda@gmail.com
                 </a>
-                {/* <p >
-                </p> */}
             </li>
             <li className="nav-contact-list">
                 <a
@@ -148,28 +152,39 @@ const SocialMedia = ({ social_class }) => {
 };
 
 const Menu = ({ menu_class }) => {
-
-    const {setToggle, setShowMenu} = useContext(MainContext);
+    const { setToggle, setShowMenu } = useContext(MainContext);
 
     const handleNavMenu = () => {
         setToggle(false);
         setShowMenu(false);
-    }
+    };
 
     return (
         <ul className={`nav-item flex-grow ${menu_class}`}>
             <li className="nav-list">
-                <Link className="nav-link clr-accent fs-medium" to="/" onClick={handleNavMenu}>
+                <Link
+                    className="nav-link clr-accent fs-medium"
+                    to="/"
+                    onClick={handleNavMenu}
+                >
                     Home
                 </Link>
             </li>
             <li className="nav-list">
-                <Link className="nav-link clr-accent fs-medium" to="/about-us"onClick={handleNavMenu}>
+                <Link
+                    className="nav-link clr-accent fs-medium"
+                    to="/about-us"
+                    onClick={handleNavMenu}
+                >
                     About
                 </Link>
             </li>
             <li className="nav-list">
-                <Link className="nav-link clr-accent fs-medium" to="/admin"onClick={handleNavMenu}>
+                <Link
+                    className="nav-link clr-accent fs-medium"
+                    to="/admin"
+                    onClick={handleNavMenu}
+                >
                     Admin
                 </Link>
             </li>

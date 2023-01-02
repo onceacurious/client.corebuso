@@ -9,7 +9,7 @@ const CaseStudy = () => {
     return (
         <section
             id="caseStudy"
-            className="container display-flex jc-center w100 ai-center"
+            className="container display-flex jc-center w100 ai-center m-inline-auto"
         >
             <div className="case-study-main">
                 <div className="case-study-img"></div>
