@@ -105,21 +105,19 @@
 
 @media screen and (min-width: 591px) {
     .text {
-        &-sm {
-            &-center {
-                text-align: center;
-            }
-            &-left {
-                text-align: justify;
-            }
+        &-center {
+            text-align: center;
+        }
+        &-left {
+            text-align: justify;
+        }
 
-            &-cap {
-                text-transform: capitalize;
-            }
+        &-cap {
+            text-transform: capitalize;
+        }
 
-            &-upper {
-                text-transform: uppercase;
-            }
+        &-upper {
+            text-transform: uppercase;
         }
     }
 }

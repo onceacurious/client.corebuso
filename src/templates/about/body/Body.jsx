@@ -5,7 +5,7 @@ const Body = () => {
     return (
         <section id="bodyAbout">
             <div className="about-body container">
-                <p className="heading-4 gradient-text text-center text-sm-left">
+                <p className="heading-4 gradient-text text-sm-center text-left">
                     About Corebuso
                 </p>
                 <p className="clr-accent w100 m-inline-auto">
@@ -32,7 +32,7 @@ const Body = () => {
                     <br />
                 </p>
                 <div className="about-prod-serve">
-                    <p className="heading-4 gradient-text text-center text-sm-left">
+                    <p className="heading-4 gradient-text text-sm-center text-left">
                         Corebuso Products & Services
                     </p>
                     <div className="about-prod-serve-body">
@@ -60,7 +60,7 @@ const Body = () => {
                 </div>
             </div>
             <div className="about-footer container">
-                <p className="fw-bold p-block-1 w100 text-center m-inline-auto">
+                <p className="fw-bold p-block-1 w100 text-sm-center text-left m-inline-auto">
                     Copyright &copy; 2022 Corebuso. All rights reserved
                 </p>
             </div>
